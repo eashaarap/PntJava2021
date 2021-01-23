@@ -17,6 +17,8 @@ public class HelloWorld { // class body start
 		System.out.println("Welcome to Java class");
 		System.out.println("Hi Easha Khanam");
 		System.out.println("Welcome all the new students" );
+
+
 		
 		
 		// When we run our code actually JVM execute main method

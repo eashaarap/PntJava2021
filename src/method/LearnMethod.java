@@ -64,7 +64,7 @@ public class LearnMethod {
     public void studentInformation(){
         String name = "James";
         String address = "Queens,NY";
-        System.out.println("The Students name is: " + name + " Student Address is: "+ address);
+       // System.out.println("The Students name is: " + name + " Student Address is: "+ address);
     }
 
     //Non Return Method without Parameter:
@@ -82,7 +82,7 @@ public class LearnMethod {
     }
 
     public static void stInfo(String name, String address, String phoneNumber){
-        System.out.println("Student name is: " + name + "Student addrses is: "+ address + "Student Address is: "+ address + "Student phone number is: "+ phoneNumber);
+        System.out.println("Student name is: " + name + "Student addresses is: "+ address + "Student Address is: "+ address + "Student phone number is: "+ phoneNumber);
     }
 
     public static void main(String[] args) {
@@ -101,7 +101,8 @@ public class LearnMethod {
         learn.doSubtraction(400, 20);
         learn.doMultiply(30, 25);
         System.out.println(learn.doMultiply(30.00, 25.00));
-        learn.studentInformation();
+
+    learn.studentInformation();
         learn.salaryCalculation();
         learn.doDivision(300,23);
 

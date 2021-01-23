@@ -8,7 +8,7 @@ public class LearnScanner {
 		// class name is Scanner
 		// how to create an object of Scanner class?
 		
-		// className objectName =new constractorOfClass();
+		// className objectName =new constructorOfClass();
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter your first name");

@@ -12,6 +12,8 @@ public class LearnSwitchCase {
        LearnSwitchCase.foodMenu(7);
 
 
+
+
 //       String name="James";
 //       switch (name){
 //           case "James":
