@@ -14,6 +14,9 @@ public class Test {
             tesla.accelerationCar();
             tesla.engineCar();
 
+            System.out.println( tesla.modernCarBrand);
+            System.out.println(tesla.teslaCarT45Price);
+
 
         }
 

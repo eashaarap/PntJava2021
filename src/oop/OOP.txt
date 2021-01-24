@@ -19,3 +19,15 @@ ABSTRACTION: implementation hiding
         - cant contain concrete methods
         -only can use 'Public' modifier
     abstract class: template needs to be defined for a group of subclasses;
+
+ENCAPSULATION: data hiding
+    -mechanism of wrapping the data(variables) and code acting on the data (methods) together in a single unit
+    - variables of class will be hidden from other classes, and can be accessed only through the methods of the current
+    class
+    TO ACHIEVE ENCAPSULATION IN JAVA:
+        - declare variables of class as private
+        - provide public setter and getter methods to modify and view the variables value
+
+INHERITANCE:
+    Grandfather = Super(parent) class
+    Father is a sub(class)

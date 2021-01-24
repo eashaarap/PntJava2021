@@ -1,6 +1,6 @@
 package oop.abtraction;
 
-public class Tesla extends ModernCar implements Car, AutoPilot{
+public class Tesla extends FlyingCar implements Car, AutoPilot{
     /*
         Concrete Class
         A class can implement multiple interface at a time but extends ONE class at a time
@@ -102,6 +102,10 @@ public class Tesla extends ModernCar implements Car, AutoPilot{
 
     public void boostEngine() {
         System.out.println("Tesla car has a boost engine feature");
+
+    }
+
+    public void flyingCarFeature() {
 
     }
 }
