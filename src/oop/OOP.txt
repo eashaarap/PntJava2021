@@ -1,0 +1,21 @@
+OOP: Object Oriented Programming
+
+Class
+Object
+Association
+Aggregation
+Composition
+
+Abstractions
+Encapsulation
+Polymorphism
+Inheritance
+
+
+ABSTRACTION: implementation hiding
+    interface: prototype;guideline for future for your reference so that dev team can follow to develop a complete
+    product; use when role needs to defined in other classes, regardless of inheritance tree of these classes
+        -can't instantiate variable and create object
+        - cant contain concrete methods
+        -only can use 'Public' modifier
+    abstract class: template needs to be defined for a group of subclasses;
