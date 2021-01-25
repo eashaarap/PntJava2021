@@ -30,4 +30,14 @@ ENCAPSULATION: data hiding
 
 INHERITANCE:
     Grandfather = Super(parent) class
-    Father is a sub(class)
+    Father is a sub(child)class of Grandfather
+    Son is a sub(child) class of father
+
+    Son --> Father --> Grandfather
+        Single: class B inherits from Class A
+        Multilevel: class C inherits from Class B, and Class B inherits from Class A
+        Hierarchical
+
+    You can add more sub classes that extends from Grandfather class and have a "hierarchical inheritance"
+
+    ex: Father, FatherTwo, FatherThree can all extend from Grandfather
