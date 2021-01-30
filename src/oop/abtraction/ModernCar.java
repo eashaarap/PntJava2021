@@ -18,6 +18,8 @@ public abstract class ModernCar {
     public abstract void gps();
     public abstract void autoPark();
     public abstract void emergencyBrake();
+    public abstract void camera360();
+
 
     //static and non static methods are allowed here:
     public void remoteStart(){

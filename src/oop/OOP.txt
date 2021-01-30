@@ -41,3 +41,34 @@ INHERITANCE:
     You can add more sub classes that extends from Grandfather class and have a "hierarchical inheritance"
 
     ex: Father, FatherTwo, FatherThree can all extend from Grandfather
+
+POLYMORPHISM:
+    - Java concept by which we can perform a single action in different ways
+    -"poly" means many and "morphs" means forms
+        - so polymorphism means over forms
+    - occurs when we have man classes that are related to each other by inheritance
+
+    Two types:
+    1. compile-time polymorphism: method overloading: static binding
+    2. runtime polymorphism: method overriding: dynamic binding
+
+        Method Overloading: during compile time
+            - Overloading allows different method to have same name,
+            but different signatures where signature can differ
+
+        Method Overriding:
+            -feature that allows a subclass or child class to provide a specific implementation of a method that is
+            already provided by one of its super-classes or parent classes
+            -When a method in a subclass has the same name, same parameters or signature, and same return type(sub type)
+            as a method in its super-class, then the method in the subclass is said to override the method in the super
+            class
+            -Method overriding is one of the way by which java achieve Run Time poloymorphism
+            -The version of a method that is executed will be determined by the object that is used to invoke it. IF an
+            object of a parent class is used to invoke the method, then the version in the parent class will be
+            executed, but if an object of the subclass is used to invoke the method, then the version in the child
+            class
+             will be executed
+             -In other words, it is the type of the object being referred to  that determines which version of an
+             overridden method will be executed
+
+

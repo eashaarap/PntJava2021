@@ -90,6 +90,11 @@ public class Tesla extends FlyingCar implements Car, AutoPilot{
 
     }
 
+    @Override
+    public void camera360() {
+
+    }
+
     public void largeDisplay() {
         System.out.println("Tesla car has a large display feature");
 

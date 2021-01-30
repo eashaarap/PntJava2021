@@ -31,8 +31,8 @@ public class LearnFinalFinallyFinalize {
             System.out.println("Division value is: " + result);
 
         } catch (Exception exception) {
-            // exception.printStackTrace();
-            System.out.println("This is arithmetic exception: Please use value greater than 0");
+             exception.printStackTrace();
+            //System.out.println("This is arithmetic exception: Please use value greater than 0");
         } finally{// code executes regardless in this block
             System.out.println("hello");
             int total = num1 + num2;
