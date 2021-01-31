@@ -1,0 +1,2 @@
+Arrays:
+   - data structure that allows you to store multiple
