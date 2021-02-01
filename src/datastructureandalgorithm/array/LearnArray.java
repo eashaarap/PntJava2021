@@ -12,7 +12,7 @@ public class LearnArray {
     //Array: which can hold multiple values of the same data type
     //Syntax: DataType [] variableName = new DataType[numberOfVariables]
 
-    //This is how you DECLARE ARRAY
+    //This is how you DECLARE ARRAY with length
     static String [] students = new String [6]; //40byte x6 = 240 byte
 
     String [] addresses = new String [7];
