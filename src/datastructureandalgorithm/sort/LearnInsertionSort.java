@@ -1,13 +1,22 @@
 package datastructureandalgorithm.sort;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class LearnInsertionSort {
     public static void main(String[] args) {
         //Insertion sort
-        int [] number = { 3, 23, 4, 22, 102, 40, 60, 56, 78, 1, 9,23,3};
-//        Arrays.sort(number, 0, 13);
-//        System.out.println(Arrays.toString(number));
+        Integer [] number = { 3, 23, 4, 22, 102, 40, 60, 56, 78, 1, 9,23,3};
+
+        //sort number in ascending order
+        Arrays.sort(number);
+        System.out.println(Arrays.toString(number));
+
+        //sort number in descending order
+          Arrays.sort(number, Collections.reverseOrder());
+        System.out.println(Arrays.toString(number));
+
+
 
         //output:
         for(int i = 0; i < number.length; i++){
