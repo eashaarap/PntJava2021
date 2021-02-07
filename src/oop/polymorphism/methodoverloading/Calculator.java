@@ -36,7 +36,9 @@ public class Calculator {
     }
     public static void stInfo (int age, String name){
         System.out.println("Student name is "+ age + " & age is " + name);
+
     }
+
     private static String aboutMe(String myName, long myNumber){
         System.out.println("My name is "+ myName + " and my phone number is "+ myNumber);
         return myName;

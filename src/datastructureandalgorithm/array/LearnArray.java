@@ -47,7 +47,7 @@ public class LearnArray {
         }catch(ArrayIndexOutOfBoundsException e){
             System.out.println("This is a Array Index Out of Bounds Exception, please use index 1-6");
         }
-        Scanner input = new Scanner(System.in);
+
         int[] numbers = new int [10];
         numbers[0]=100;
         numbers[1]=102;
