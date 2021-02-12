@@ -1,0 +1,8 @@
+-	He has to give permission for us to push our codes to his repository but on our own branch
+-	Git branch
+-	Git checkout -b your branch name
+-	Git branch- it should display my name
+-	Then go to the secret.properties folder and change the password
+-	Git add .
+-	Git commit -m”secret properties updated”
+-	Git push origin your branch name
