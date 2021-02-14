@@ -23,7 +23,7 @@ public class WritingOnExcel {
         B.setCellValue("Name");
         // Mentoring/For_excel/Testing.xlsc
         // looking for connection
-        File f = new File("D:\\2020-2021 Selenium Training\\Selenium\\PntJava2021\\negash/Testing.xlsx");
+        File f = new File("../PntJava2021//negash/Testing2.xlsx");
         FileOutputStream fo = new FileOutputStream(f);
         workbook.write(fo);
         System.out.println("a work book is created ");

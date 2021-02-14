@@ -30,7 +30,7 @@ public class WorkingOnExcel1 {
 
         }// end of row
         // looking for connection
-        File f = new File("D:\\2020-2021 Selenium Training\\Selenium\\PntJava2021\\negash/Random_Numbers.xlsx"); // holding a file path
+        File f = new File("../PntJava2021/negash/Random_Numbers2.xlsx"); // holding a file path
         FileOutputStream fo = new FileOutputStream(f);
         workbook.write(fo);
         System.out.println("The file is created ");
