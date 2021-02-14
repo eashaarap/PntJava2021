@@ -21,7 +21,7 @@ public class LearnScanner {
 		
 		System.out.println("Full Name : "+firstName+" "+lastName);
 		
-		System.out.println("Enter Coursee Fee");
+		System.out.println("Enter Course Fee");
 		double cFee=input.nextDouble();
 		System.out.println("Course fee is "+cFee);
 		System.out.println("Enter your age");

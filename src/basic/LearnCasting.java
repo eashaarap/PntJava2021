@@ -9,9 +9,9 @@ public class LearnCasting {
 	public static void main(String[] args) {
 
 		double price = 35.99;
-		int discountePrice = (int) price;
+		int discountPrice = (int) price;
 
-		System.out.println(discountePrice);
+		System.out.println(discountPrice);
 
 		int num1 = 60;
 		int num2 = 40;
