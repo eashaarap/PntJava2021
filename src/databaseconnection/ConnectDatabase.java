@@ -15,6 +15,14 @@ public class ConnectDatabase {
     //jdbc url
     //config jdbc
     //mySql Query
+    /*
+    Steps:
+        Secret.properties file ----> loaded in java using loadProperties method
+        ConnectDatabase() method ----> develop connect to mySQL server using url, userName, Password
+        readDatabase()----> call connectDatabase() method
+                            columnName hold in a ListArray
+                            use for each loop to iterate value
+     */
 
     public static Connection connection = null;
     public static Statement statement = null;
@@ -23,8 +31,8 @@ public class ConnectDatabase {
     public static String filePath="../PntSession/ExtLibrary/Properties/Secret.properties";
 
     public static void main(String[] args) throws SQLException, IOException, ClassNotFoundException {
-        //ConnectDatabase.connectToSQLDatabase();
-        ConnectDatabase.readDatabase("movie", "title");
+        ConnectDatabase.connectToSQLDatabase();
+        //ConnectDatabase.readDatabase("movie", "title");
     }
 
     //Load Properties
@@ -64,14 +72,16 @@ public class ConnectDatabase {
         }
     }
 
+    //returning List type parameter of String type hence: List<String>
     public static List<String> getResultSetData(ResultSet resultSet, String columnName) throws SQLException{
         List<String> dataList = new ArrayList<>();
-        while(resultSet.next()){
-            String itemName = resultSet.getString(columnName);
+        while(resultSet.next()){//if resultSet has a value it will continue with the loop
+            String itemName = resultSet.getString(columnName);//will get the value from column using getString method
             dataList.add(itemName);
         }
         return dataList;
     }
+    //now we will use previous method in new method to read the columns
     public static List<String> readDatabase(String tableName, String columnName) throws SQLException {
         List<String> data = new ArrayList<>();
         try{
