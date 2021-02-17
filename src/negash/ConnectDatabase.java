@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class ConnectDatabase {
@@ -19,6 +21,10 @@ public class ConnectDatabase {
     public static PreparedStatement preparedStatement = null;// an interface extends to Statement - An object that represents a precompiled SQL statement.
     public static ResultSet resultSet = null;// an interface - maintains a cursor pointing  to its current row of data.
     public static String filePath = "../ProjectSolo/External_Liberary/Properties_files/DontTell.properties"; // to hold the path
+
+    public static void main(String[] args) throws SQLException, IOException, ClassNotFoundException {
+        ConnectDatabase.connectToMySQL();
+    }// end of main
 
     //first we need to get the data we have in our properties file to use them for connection
     public static Properties loadProperties(String filePath) throws IOException {
@@ -41,6 +47,7 @@ public class ConnectDatabase {
         statement = connection.createStatement();
         return connection;
     }
+
     // If we don’t close our open connections, we might leave open windows for hackers to manipulate our database
     // and memory cache will consume unnecessary resource
     public static void close(){
@@ -56,8 +63,17 @@ public class ConnectDatabase {
         }
     }
 
-    public static void main(String[] args) throws SQLException, IOException, ClassNotFoundException {
-        ConnectDatabase.connectToMySQL();
-    }// end of main
+    // this method will show us what we have retrieve from our data
+    public static List<String> getResultSetData(ResultSet resultSet, String columnName) throws SQLException {
+        //since it is an array type of method let me declare an array list to accept the incoming array data
+        List<String> dataList = new ArrayList<>();// declaring an array named dataList
+        while (resultSet.next()){                 // when the resultSet next has data
+            String itemList = resultSet.getString(columnName);// get the data from the column and put in itemList
+            dataList.add(itemList);             // and add the itemList into the array I declared earlier [dataList]
+        }
+        return dataList;                        // finally give me back my array
+
+    }
+
 
 }// end of line
