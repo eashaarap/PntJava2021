@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class UpdatingInfoInTable {
      static String url = "jdbc:mysql://localhost:3306/wea_selenium_ny_fall2021";
      static String user = "root";
-     static String password = "Monika199%";
+     static String password = "Use your own password here ";
 
     public static void main(String[] args) {
 

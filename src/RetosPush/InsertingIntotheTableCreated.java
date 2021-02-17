@@ -9,7 +9,7 @@ public class InsertingIntotheTableCreated {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/wea_selenium_ny_fall2021";
         String user = "root";
-        String password = "Monika199%";
+        String password = "Use your own password here ";
 
         try {
             //1. get a connection to databse
