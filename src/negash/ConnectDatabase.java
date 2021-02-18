@@ -26,7 +26,18 @@ public class ConnectDatabase {
         ConnectDatabase.connectToMySQL();
     }// end of main
 
-    //first we need to get the data we have in our properties file to use them for connection
+    /**
+     * Method to load personal propertied - need a file path
+     * Searches for the property with the specified key in this property list.
+     * If the key is not found in this property list, the default property list,
+     * and its defaults, recursively, are then checked. T
+     * he method returns null if the property is not found.
+     * Params:  key – the property key.
+     * Returns: the value in this property list with the specified key value.
+     * @param filePath
+     * @return
+     * @throws IOException
+     */
     public static Properties loadProperties(String filePath) throws IOException {
         Properties properties = new Properties();// instantiate the properties class
         InputStream inputStream = new FileInputStream(filePath);// use of inputStream
@@ -36,12 +47,27 @@ public class ConnectDatabase {
     }
 
     // now we can connect to our database using the loadProperties method
+    /**
+     * A connection (session) with a specific database. SQL statements are executed and results are returned
+     * within the context of a connection. A Connection object's database is able to provide information
+     * describing its tables, its supported SQL grammar, its stored procedures, the capabilities of this connection,
+     * and so on. This information is obtained with the getMetaData method.
+     * @return
+     * @throws IOException
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public static Connection connectToMySQL() throws IOException, ClassNotFoundException, SQLException {
         Properties prop = ConnectDatabase.loadProperties(filePath);// using my loadProperties method
         String driver = prop.getProperty("MYSQLJDBC.driver") ; // declare driver variable and use my object prop declared above
         String user = prop.getProperty("MYSQLJDBC.userName")  ;// declare user variable and use my object prop declared above
         String password = prop.getProperty("MYSQLJDBC.password");// declare password variable and use my object prop declared above
         String url = prop.getProperty("MYSQLJDBC.url") ;        // declare url variable and use my object prop declared above
+        // registration of the driver
+        /** why we use Class.forName
+         * Returns the Class object associated with the class or interface with the given string name.
+         * Invoking this method is equivalent to:  Class.forName(className, true, currentLoader)
+         */
         Class.forName(driver);
         connection = DriverManager.getConnection(url,user,password);
         statement = connection.createStatement();
