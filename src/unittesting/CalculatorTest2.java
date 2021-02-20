@@ -1,12 +1,10 @@
 package unittesting;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.jupiter.api.Disabled;
 
 
-public class CalculatorTest {
+public class CalculatorTest2 {
 @Test
     public void testDoSummation(){
 //       int result = Calculator.doSum(25, 26);
@@ -37,5 +35,17 @@ public class CalculatorTest {
         int expectedResult = -24;
         int actualResult = Calculator.doSub(33,56);
         Assert.assertNotEquals("Test Fail",expectedResult, actualResult);
+    }
+    @Before
+    public void startUnitTesting(){
+        System.out.println("Start Unit Testing");
+    }
+    @After
+    public void endUnitTesting(){
+        System.out.println("End Unit Testing");
+    }
+    @BeforeClass
+    public static void welcome(){
+        System.out.println("Welcome Unit Testing");
     }
 }

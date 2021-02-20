@@ -6,12 +6,12 @@ import org.junit.Test;
 import org.junit.jupiter.api.Disabled;
 
 
-public class CalculatorTest {
+public class CalculatorTest1 {
 @Test
     public void testDoSummation(){
 //       int result = Calculator.doSum(25, 26);
        //Expected result = 51;
-        int expectedResult = 51;
+        int expectedResult = 61;
         int actualResult = Calculator.doSum(25, 26);
 
         //Verify expected Result vs Actual Result
@@ -25,7 +25,7 @@ public class CalculatorTest {
         // short cut way instead of using if else statement
         Assert.assertEquals("Test Fail",expectedResult, actualResult);
     }
-    @Test(timeout = 100)@Ignore @Disabled
+    @Test(timeout = 29  )@Ignore @Disabled
     public void testDoSub(){
     int expectedResult  = -30;
     int actualResult = Calculator.doSub(20,50);
