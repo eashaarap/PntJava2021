@@ -1,6 +1,6 @@
 package advance;
 
-import basic.LearnDataType;
+
 
 public class Test {
 	
@@ -11,6 +11,7 @@ public class Test {
 		
 		String studentName ="Cherif Ameur";
 		System.out.println("Hello Mr Mamun");
+
 		
 		
 		

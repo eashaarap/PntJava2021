@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public class ReadExcelFile {
-    //File location
+    //File location: creating the path for our file to be read
     public static String filePath = "../PnTSession/DataTest/pnt_class.xlsx";
     public static void main(String[] args) {
         ReadExcelFile.readExcelFile(filePath, 0);
@@ -18,9 +18,10 @@ public class ReadExcelFile {
 
     public static void readExcelFile(String filePath, int sheetNumber) {
         try{
-            //For InputSteam
+            //For InputSteam: taking the path so we can use it
             FileInputStream inputStream = new FileInputStream(filePath);
 
+            //Workbook allows us to use excel file
             Workbook workbook = new XSSFWorkbook(inputStream);
             //Which sheet you want to read?
             Sheet dataTypeSheet = workbook.getSheetAt(sheetNumber);

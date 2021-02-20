@@ -2,15 +2,15 @@ package databaseconnection;
 
 public class Movie {
 
-
-
-
     private int id;
     private String title;
     private int releaseYear;
     private String genre;
-    private String mpaRating ;
+    private String mpaRating;
     private String producer;
+
+    public Movie() {
+    }
 
     public Movie(int id, String title, int releaseYear, String genre, String mpaRating, String producer) {
         this.id = id;

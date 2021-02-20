@@ -13,6 +13,7 @@ public class ConnectDatabaseDirectly {
     https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-reference-jdbc-url-format.html
      */
     public static void main(String[] args) throws SQLException {
+                                    //localost:port#/databaseName+IfYouHaveProperties
         String url = "jdbc:mysql://localhost:3306/pnt_selenium?serverTimezone=UTC";
         String user = "root";
         String password = "password";
@@ -36,13 +37,12 @@ public class ConnectDatabaseDirectly {
 
             for(Movie mv: movies){
                 String query = "insert into movie(id, title, releaseYear, genre, mpaRating, producer)"
-                    + "values( "+mv.getId()+",'"+mv.getTitle()+"',"+mv.getReleaseYear()+",'"+mv.getGenre()+"','"+mv.getMpaRating()+
-                        "','"+mv.getProducer()+"' )";
-                statement.execute(query);
+                    + "values("+mv.getId()+",'"+mv.getTitle()+"',"+mv.getReleaseYear()+",'"+mv.getGenre()+"','"+mv.getMpaRating()+
+                        "','"+mv.getProducer()+"')";
             }
 
 //            String query = "select * from students";
-
+//            statement.execute(query);
         }catch(SQLDataException e){
             e.printStackTrace();
         }finally{

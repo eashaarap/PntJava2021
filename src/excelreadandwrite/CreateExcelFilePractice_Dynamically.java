@@ -32,13 +32,14 @@ public class CreateExcelFilePractice_Dynamically {
         createExcel(filePath,"Fruit Names",fruits);
 
     }
-    //step 1. what parameters do we need to pass? : we need a path, sheetName, we need 2d array: Object[][] + anyName
+    //step 1. what parameters do we need to pass? :
+         //we need a path, sheetName, we need 2d array(because excel file is 2D): Object[][] + nameOfYourTable(for now)
     public static void createExcel(String path, String sheetName, Object [] [] randomName ) throws IOException {
 
         //Create a workbook object: XSSFWorkbook nameofWorkbook = new XSSWorkBook();
         XSSFWorkbook workbook = new XSSFWorkbook();
 
-        //Create a sheet: XSSFSheet nameofSheet = nameOfWorkbook.createSheet(sheetName);
+        //Create a sheet: XSSFSheet nameofSheet = nameOfWorkbook.createSheet(sheetName);tyyyyye 2qn\
         XSSFSheet sheet = workbook.createSheet(sheetName);
 
         // just a print out statement to make sure we can see code is working

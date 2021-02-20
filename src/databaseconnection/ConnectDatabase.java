@@ -36,20 +36,23 @@ public class ConnectDatabase {
 
       //ConnectDatabase.insertDataFromStringToSQLTable("1999","movie","releaseYear");
 
-//       int [] numbers = {23, 24, 25, 26, 27, 28, 29, 30, 31};
+//      int [] numbers = {233, 242, 253, 262, 274, 228, 293, 330, 321};
 //        ConnectDatabase.insertDataFromArrayToSqlTable(numbers, "productDetails", "productID");
 
-        List<String> stNames = new ArrayList<>();
-                stNames.add("Duck");
-                stNames.add("Bob");
-                stNames.add("Frank");
-                stNames.add("Zahra");
-                stNames.add("Lilo");
-                stNames.add("Mina");
+//        List<String> stNames = new ArrayList<>();
+//                stNames.add("Duck");
+//                stNames.add("Bob");
+//                stNames.add("Bablu");
+//                stNames.add("Zahra");
+//                stNames.add("Billy");
+//                stNames.add("Samantha");
+//
+//        ConnectDatabase.insertDataFromArrayListToSqlTable(stNames,"students","studentNames");
 
-        ConnectDatabase.insertDataFromArrayListToSqlTable(stNames,"students","studentNames");
 
         //ConnectDatabase.createPropertyFile();
+
+        ConnectDatabase.insertProfileToSqlTable("movie","title","releaseYear","Hidden Figures","2000");
     }
 
     // to create our secret.properties file we can create a method
@@ -139,11 +142,12 @@ public class ConnectDatabase {
 
 
 
-    public static void insertProfileToSqlTable(String tableName,String columnName1, String columnName2, String name, int num) throws SQLException, IOException, ClassNotFoundException {
+    public static void insertProfileToSqlTable(String tableName,String columnName1, String columnName2, String name, String num) throws SQLException, IOException, ClassNotFoundException {
         connectToSQLDatabase();
-        preparedStatement = connection.prepareStatement("INSERT INTO " + tableName + " ( " + columnName1 + ","+columnName2 + ") VALUES(?,?");
-        preparedStatement.setString(1, name);
-        preparedStatement.setInt(2, num);
+        preparedStatement =
+                connection.prepareStatement("INSERT INTO " + tableName + " ( " + columnName1 + "," +columnName2 + ") VALUES(?,?);");
+        preparedStatement.setObject(1, name);
+        preparedStatement.setObject(2, num);
         preparedStatement.executeUpdate();
 
 
@@ -182,7 +186,7 @@ SUDO CODE:
     public static void insertDataFromArrayToSqlTable(int[] arrayData, String tableName, String columnName) {
         try {
             //connect and prepare your query as we did in the last method
-            connectToSQLDatabase();
+            ConnectDatabase.connectToSQLDatabase();
 
             //1st STEP:if table exist drop table
             preparedStatement = connection.prepareStatement("DROP TABLE IF EXISTS `" + tableName + "`");
@@ -201,7 +205,7 @@ SUDO CODE:
             for (int i = 0; i < arrayData.length; i++) {
                 // SQL Query: insert into tableName (columnName) values();
                 preparedStatement = connection.prepareStatement("INSERT  INTO " + tableName + " (" + columnName + ") values (?)");
-                preparedStatement.setInt(1, arrayData[i]);// as we did in previous method, column 1 + array data
+                preparedStatement.setObject(1, arrayData[i]);// as we did in previous method, column 1 + array data
                 preparedStatement.executeUpdate();
             }
         } catch (IOException ioException) {
@@ -225,7 +229,7 @@ SUDO CODE:
 
         for(String st: list) {
             preparedStatement = connection.prepareStatement("INSERT  INTO " + tableName + " (" + columnName + ") values (?)");
-            preparedStatement.setObject(1, st);//using setObject as its a ArrayList
+            preparedStatement.setObject(1, st);//using setObject as its a ArrayList; number of parameters is 1 hence
             preparedStatement.executeUpdate();
         }
     }

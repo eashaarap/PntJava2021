@@ -7,6 +7,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/*
+    We will be reading through pre made excel file and get ONE cell from the table
+ */
+
 public class ExcelPracticeRead {
 
     public static void main(String[] args) throws IOException {
@@ -18,7 +22,7 @@ public class ExcelPracticeRead {
         FileInputStream input = new FileInputStream(filePath);
 
         //to open path: basically opening up Excel in PC
-        Workbook workbook = WorkbookFactory.create(input);
+        Workbook workbook = WorkbookFactory.create(input);//or new XSSFWorkbook(input);
 
         //find excel/workbook sheet:
         Sheet sheet = workbook.getSheetAt(0);
