@@ -12,7 +12,7 @@ public class LearnMap {
     String name = "James";
 
     public static void main(String[] args) {
-        Map<String,String> stateMap= new HashMap<>();
+        HashMap<String,String> stateMap= new HashMap<>();
         stateMap.put("USA", "NEW YORK");
         stateMap.put("CANADA", "ONTARIO");
         stateMap.put("ARMENIA", "YEREVAN");
@@ -33,6 +33,11 @@ public class LearnMap {
         for(String st: stateMap.keySet()){
             System.out.println(st+ " : "+ stateMap.get(st));
         }
+        System.out.println("********For each w/ Lamda Approach**********");
+        //easiest way to retrieve all
+        stateMap.forEach((p,k ) -> System.out.println(p+" "+k) );
+        // use our hashmap.forEach( (k,v )  -> sout (k + v)   )
+        //k=key v = value "->" is a lambda
     }
 
 }
