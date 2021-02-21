@@ -37,7 +37,7 @@ public class LearnMap {
         //easiest way to retrieve all
         stateMap.forEach((p,k ) -> System.out.println(p+" "+k) );
         // use our hashmap.forEach( (k,v )  -> sout (k + v)   )
-        //k=key v = value "->" is a lambda
+        //k=key v = value "->" is called a lambda
     }
 
 }
