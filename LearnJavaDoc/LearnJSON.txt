@@ -1,0 +1,14 @@
+http://www.resfulapi.net
+[{
+  "key": "value",
+  "lastName": "Cohen",
+  "Address": [
+    {"homeAddress":"Jamaica,NY"},
+    {"officeAddress":[
+      {"Street": "22nd"},
+      {"Avenue": "Jackson Ave"},
+      {"Office Number": "233"}
+    ]}
+  ]
+
+  can have objects within an array within an object

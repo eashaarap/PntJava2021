@@ -1,0 +1,29 @@
+[{
+  "firstName": "Jack",
+  "lastName": "Cohen",
+  "Address": [
+    {"homeAddress":"Jamaica,NY"},
+    {"officeAddress":[
+      {"Street": "22nd"},
+      {"Avenue": "Jackson Ave"},
+      {"Office Number": "233"}
+    ]}
+  ]
+},
+{
+"firstName": "Easha",
+"lastName": "Khanam",
+"Address": [
+{"homeAddress":"Jamaica,NY"},
+{"officeAddress":[
+{"Street": "22nd"},
+{"Avenue": "Jackson Ave"},
+{"Office Number": "233"}
+]}
+]
+
+
+
+}
+]
+
